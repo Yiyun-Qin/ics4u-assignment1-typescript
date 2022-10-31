@@ -59,11 +59,13 @@ for (let loopCounter = 0; loopCounter < loopCounter + 1; loopCounter++) {
   turn = loopCounter + 1
   if (turn + 1 > 5) {
     break
+  } else {
+    continue
   }
 }
 turn = turn + 1
 if (turn > 5) {
-  console.log("\nYou doesn't win in 5 turns!")
+  console.log("\nYou don't win in 5 turns!")
 } else {
   console.log('\nYou win!')
   console.log(`It takes you ${turn} turns to win the game.`)

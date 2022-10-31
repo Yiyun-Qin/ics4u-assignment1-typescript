@@ -1,0 +1,52 @@
+FOR (loopCounter = 0; loopCounter < loopCounter + 1; loopCounter++)
+    GET randomNumber
+    IF (randomNumber === 1) THEN
+        random = "rock"
+    ELSEIF (randomNumber === 2) THEN
+        random = "paper"
+    ELSEIF (randomNumber === 3) THEN
+        random = "scissor"
+    ENDIF
+    SHOW "The computer choose random."
+    GET choose
+    IF (choose === "rock" && choose === "paper" && choose === "scissor") THEN
+        IF (choose === random) THEN
+            SHOW "Tie."
+        ELSE
+            IF (random === "rock") THEN
+                IF (choose === "paper") THEN
+                    BREAK
+                ELSE
+                    SHOW "You lose!"
+                ENDIF
+            ELSEIF (random === "paper") THEN
+                IF (choose === "scissor") THEN
+                    BREAK
+                ELSE
+                    SHOW "You lose!"
+                ENDIF
+            ELSEIF (random === "scissor") THEN
+                IF (choose === "rock") THEN
+                    BREAK
+                ELSE
+                    SHOW "You lose!"
+                ENDIF
+            ENDIF
+        ENDIF
+    ELSE
+        SHOW "Please choose a type from rock, paper and scissor!"
+    ENDIF
+    CALCULATE turn = loopCounter + 1
+    IF (turn + 1 > 5) THEN
+        BREAK
+    ELSE
+        CONTINUE
+    ENDIF
+ENDFOR
+CALCULATE turn = turn + 1
+IF (turn > 5) THEN
+    SHOW "You doesn't win in 5 turns!"
+ELSE
+    SHOW "You win!"
+    SHOW "you take turn turns to win the game."
+ENDIF

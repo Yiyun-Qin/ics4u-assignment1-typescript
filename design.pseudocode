@@ -7,7 +7,7 @@ FOR (loopCounter = 0; loopCounter < loopCounter + 1; loopCounter++)
     ELSEIF (randomNumber === 3) THEN
         random = "scissor"
     ENDIF
-    SHOW "The computer choose random."
+    SHOW "The computer chooses random."
     GET choose
     IF (choose === "rock" && choose === "paper" && choose === "scissor") THEN
         IF (choose === random) THEN
